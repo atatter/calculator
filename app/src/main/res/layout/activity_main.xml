@@ -76,21 +76,24 @@
             android:text="4"
             android:layout_below="@id/btn03"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%"/>
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="5"
             android:id="@+id/btn08"
             android:layout_alignTop="@id/btn07"
             android:layout_toRightOf="@id/btn07"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%"/>
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="6"
             android:id="@+id/btn09"
             android:layout_alignTop="@id/btn08"
             android:layout_toRightOf="@id/btn08"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%"/>
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="+"
             android:id="@+id/btn10"
@@ -98,54 +101,62 @@
             android:layout_toRightOf="@id/btn09"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
+            style="@style/button_calc"
              />
         <Button
             android:text="1"
             android:id="@+id/btn11"
             android:layout_below="@id/btn07"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="2"
             android:id="@+id/btn12"
             android:layout_alignTop="@id/btn11"
             android:layout_toRightOf="@id/btn11"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="3"
             android:id="@+id/btn13"
             android:layout_alignTop="@id/btn12"
             android:layout_toRightOf="@id/btn12"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="-"
             android:id="@+id/btn14"
             android:layout_alignTop="@id/btn13"
             android:layout_toRightOf="@id/btn13"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="."
             android:id="@+id/btn15"
             android:layout_below="@id/btn11"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="0"
             android:id="@+id/btn16"
             android:layout_alignTop="@id/btn15"
             android:layout_toRightOf="@id/btn15"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="25%" />
+            app:layout_widthPercent="25%"
+            style="@style/button_calc"/>
         <Button
             android:text="="
             android:id="@+id/btn17"
             android:layout_alignTop="@id/btn16"
             android:layout_toRightOf="@id/btn16"
             app:layout_heightPercent="20%"
-            app:layout_widthPercent="50%" />
+            app:layout_widthPercent="50%"
+            style="@style/button_calc"/>
 
     </android.support.percent.PercentRelativeLayout>
 </LinearLayout>

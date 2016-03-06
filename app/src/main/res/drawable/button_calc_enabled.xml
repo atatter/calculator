@@ -6,9 +6,5 @@
         android:centerColor="#0000CC"
         android:endColor="#00CCFF"
         android:startColor="#00CCFF"/>
-    <padding
-        android:bottom="7dp"
-        android:left="7dp"
-        android:right="7dp"
-        android:top="7dp" />
+    <stroke android:width="5px" android:color="#FFFFFF"/>
 </shape>
