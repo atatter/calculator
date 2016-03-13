@@ -9,7 +9,7 @@ public class CalculatorEngine {
 
     private String currentNumber = "0";
 
-    private String currentOperation = null;
+    private String currentOperation = "+";
 
     private double nr1 = 0;
     private String nr2 = null;
@@ -40,10 +40,10 @@ public class CalculatorEngine {
     public void operation(String operation) {
         switch (operation) {
             case "+" :
-                currentOperation = "+";
                 if(nr2 != null) {
                     calculation();
                 }
+                currentOperation = "+";
                 break;
             case "-" :
                 if(nr2 != null) {
@@ -83,6 +83,9 @@ public class CalculatorEngine {
                 case "*":
                     nr1 = nr1 * Double.parseDouble(nr2);
                     break;
+                default:
+                    nr1 = nr1 + Double.parseDouble(nr2);
+                    break;
             }
         }
         nr2 = null;
@@ -95,18 +98,17 @@ public class CalculatorEngine {
 
         } else {
             if(nr2 == null) {
-                nr2 = "0.";
+                
             } else {
                 nr2 = nr2 + ".";
             }
 
         }
-        currentNumber = nr2;
     }
 
     //Kustutamine / reset
     public void clear() {
-        currentOperation = null;
+        currentOperation = "+";
         nr1 = 0;
         nr2 = null;
         currentNumber = "" + nr1;
