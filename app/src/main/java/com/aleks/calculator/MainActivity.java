@@ -13,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity: ";
     private static final String STATE_CALCULATION = "userCalculation";
+    private static final String STATE_NR2 = "nr2";
+    private static final String STATE_NR = "nr1";
 
     private CalculatorEngine calculator = new CalculatorEngine();
 
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.e(TAG, "onSavedInstanceState onCreate called");
             }
             calculator.setCurrentNumber(savedInstanceState.getString(STATE_CALCULATION));
+            calculator.setNr1(savedInstanceState.getDouble(STATE_NR));
+            calculator.setNr2(savedInstanceState.getString(STATE_NR2));
+
         }
 
         //Ühendan nupud äpiga
@@ -218,7 +223,9 @@ public class MainActivity extends AppCompatActivity {
         if(BuildConfig.DEBUG) {
             Log.e(TAG, "onSaveInstanceState called");
         }
-        //savedIntanceState.putInt(STATE_CALCULATION, calculator.getCurrentNumber());
+        savedIntanceState.putString(STATE_CALCULATION, calculator.getCurrentNumber());
+        savedIntanceState.putString(STATE_NR2, calculator.getNr2());
+        savedIntanceState.putDouble(STATE_NR, calculator.getNr1());
 
         super.onSaveInstanceState(savedIntanceState);
     }
