@@ -33,6 +33,7 @@
             app:layout_heightPercent="20%"
             app:layout_widthPercent="75%"
             style="@style/button_calc"
+            android:onClick="resetOnclick"
             />
         <Button
             android:text="/"
@@ -41,14 +42,16 @@
             android:layout_toRightOf="@id/btn01"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="opOnclick"/>
         <Button
             android:text="7"
             android:id="@+id/btn03"
             android:layout_below="@id/btn01"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="8"
             android:id="@+id/btn04"
@@ -56,7 +59,8 @@
             android:layout_toRightOf="@id/btn03"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="9"
             android:id="@+id/btn05"
@@ -64,22 +68,25 @@
             android:layout_alignTop="@id/btn04"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
-            android:text="X"
+            android:text="*"
             android:id="@+id/btn06"
             android:layout_alignTop="@id/btn05"
             android:layout_toRightOf="@id/btn05"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="opOnclick"/>
         <Button
             android:id="@+id/btn07"
             android:text="4"
             android:layout_below="@id/btn03"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="5"
             android:id="@+id/btn08"
@@ -87,7 +94,8 @@
             android:layout_toRightOf="@id/btn07"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="6"
             android:id="@+id/btn09"
@@ -95,7 +103,8 @@
             android:layout_toRightOf="@id/btn08"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="+"
             android:id="@+id/btn10"
@@ -104,6 +113,7 @@
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
             style="@style/button_calc"
+            android:onClick="opOnclick"
              />
         <Button
             android:text="1"
@@ -111,7 +121,8 @@
             android:layout_below="@id/btn07"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="2"
             android:id="@+id/btn12"
@@ -119,7 +130,8 @@
             android:layout_toRightOf="@id/btn11"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="3"
             android:id="@+id/btn13"
@@ -127,7 +139,8 @@
             android:layout_toRightOf="@id/btn12"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="-"
             android:id="@+id/btn14"
@@ -135,14 +148,16 @@
             android:layout_toRightOf="@id/btn13"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="opOnclick"/>
         <Button
             android:text="."
             android:id="@+id/btn15"
             android:layout_below="@id/btn11"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="commaOnclick"/>
         <Button
             android:text="0"
             android:id="@+id/btn16"
@@ -150,7 +165,8 @@
             android:layout_toRightOf="@id/btn15"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="25%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="nrOnclick"/>
         <Button
             android:text="="
             android:id="@+id/btn17"
@@ -158,7 +174,8 @@
             android:layout_toRightOf="@id/btn16"
             app:layout_heightPercent="20%"
             app:layout_widthPercent="50%"
-            style="@style/button_calc"/>
+            style="@style/button_calc"
+            android:onClick="equalOnclick"/>
 
     </android.support.percent.PercentRelativeLayout>
 </LinearLayout>
