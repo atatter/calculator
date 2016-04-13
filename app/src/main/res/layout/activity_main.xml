@@ -175,7 +175,7 @@
             app:layout_heightPercent="20%"
             app:layout_widthPercent="50%"
             style="@style/button_calc"
-            android:onClick="equalOnclick"/>
+            android:onClick="opOnclick"/>
 
     </android.support.percent.PercentRelativeLayout>
 </LinearLayout>
