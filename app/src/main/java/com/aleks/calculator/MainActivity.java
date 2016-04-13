@@ -16,10 +16,10 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity: ";
-    private static final String STATE_CALCULATION = "userCalculation";
+    private static final String STATE_NR1 = "nr1";
     private static final String STATE_NR2 = "nr2";
-    private static final String STATE_NR = "nr1";
+    private static final String STATE_RES = "res";
+    private static final String STATE_OP = "op";
 
     private Numberz calculator = new Numberz();
 
@@ -29,15 +29,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(BuildConfig.DEBUG) {
-            Log.e(TAG, "onCreate called");
-        }
         if(savedInstanceState != null) {
-            if (BuildConfig.DEBUG) {
-                Log.e(TAG, "onSavedInstanceState onCreate called");
-            }
-            calculator.setNr1(savedInstanceState.getDouble(STATE_NR));
+
+            calculator.setNr1(savedInstanceState.getDouble(STATE_NR1));
             calculator.setNr2(savedInstanceState.getString(STATE_NR2));
+            calculator.setCurrentOperator(savedInstanceState.getString(STATE_OP));
+            calculator.setRes(savedInstanceState.getDouble(STATE_RES));
 
         }
 
@@ -54,12 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(Bundle savedIntanceState) {
-        if(BuildConfig.DEBUG) {
-            Log.e(TAG, "onSaveInstanceState called");
-        }
-        //savedIntanceState.putString(STATE_CALCULATION, calculator.getCurrentNumber());
+
+        savedIntanceState.putDouble(STATE_NR1, calculator.getNr1());
         savedIntanceState.putString(STATE_NR2, calculator.getNr2());
-        savedIntanceState.putDouble(STATE_NR, calculator.getNr1());
+        savedIntanceState.putDouble(STATE_RES, calculator.getRes());
+        savedIntanceState.putString(STATE_OP, calculator.getCurrentOperator());
 
         super.onSaveInstanceState(savedIntanceState);
     }
