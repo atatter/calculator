@@ -77,29 +77,32 @@ public class MainActivity extends AppCompatActivity {
         //See on vajutatud nupu tekst
         String op = btn.getText().toString();
 
-        if(calculator.getCurrentOperator() == null && calculator.getNr2() == null) {
-            calculator.setCurrentOperator(op);
-        } else if (calculator.getNr2() != null && calculator.getCurrentOperator() == null) {
-            calculator.setNr1(Double.parseDouble(calculator.getNr2()));
-            calculator.setNr2(null);
-            calculator.setCurrentOperator(op);
-        } else if (calculator.getCurrentOperator() != null && calculator.getNr2() == null){
-            calculator.setCurrentOperator(op);
-        } else {
-            if(op == "=") {
-                sendBroadcast();
-                calculator.setNr1(calculator.getRes());
-                calculator.setNr2(null);
-                calculator.setCurrentOperator(null);
-                return;
-            } else {
-                sendBroadcast();
-                calculator.setNr1(calculator.getRes());
+
+
+            if (calculator.getCurrentOperator() == null && calculator.getNr2() == null) {
+                calculator.setCurrentOperator(op);
+            } else if (calculator.getNr2() != null && calculator.getCurrentOperator() == null) {
+                calculator.setNr1(Double.parseDouble(calculator.getNr2()));
                 calculator.setNr2(null);
                 calculator.setCurrentOperator(op);
-                return;
+            } else if (calculator.getCurrentOperator() != null && calculator.getNr2() == null) {
+                calculator.setCurrentOperator(op);
+            } else {
+                if (op == "=") {
+                    sendBroadcast();
+                    calculator.setNr1(calculator.getRes());
+                    calculator.setNr2(null);
+                    calculator.setCurrentOperator(null);
+                    return;
+                } else {
+                    sendBroadcast();
+                    calculator.setNr1(calculator.getRes());
+                    calculator.setNr2(null);
+                    calculator.setCurrentOperator(op);
+                    return;
+                }
             }
-        }
+
 
         textViewAnswer.setText(calculator.toString());
     }
